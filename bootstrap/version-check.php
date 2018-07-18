@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Minimum PHP version.
-define( 'PLUGIN_PHP_VERSION', '9.0.0' );
+define( 'PLUGIN_PHP_VERSION', '7.0.0' );
 
 // Do not allow the theme to be active if the PHP version is not met.
 if ( version_compare( PHP_VERSION, PLUGIN_PHP_VERSION, '<' ) ) {
