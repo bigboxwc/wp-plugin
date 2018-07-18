@@ -50,7 +50,7 @@ echo -n "[Y]es/[N]o: "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ]; then
 	# Remove ignored files to reset repository to pristine condition. Previous
-	# test ensures that changed files abort the plugin build.
+	# test ensures that changed files abort the wc-combined-shipping build.
 	status "Cleaning working directory..."
 	git clean -xdf
 else
@@ -60,25 +60,21 @@ fi
 
 # Run the build
 status "Installing dependencies..."
-npm install
 composer install
 
 status "Generating .pot file..."
 wp i18n make-pot . resources/languages/wc-combined-shipping.pot --domain=wc-combined-shipping
 
-status "Generating build..."
-npm run build
-
 # Update version in files.
-sed -i "" "s|%PLUGIN_VERSION%|${PACKAGE_VERSION}|g" style.css
-sed -i "" "s|%PLUGIN_VERSION%|${PACKAGE_VERSION}|g" functions.php
+sed -i "" "s|%WC_COMBINED_SHIPPING_VERSION%|${PACKAGE_VERSION}|g" style.css
+sed -i "" "s|%WC_COMBINED_SHIPPING_VERSION%|${PACKAGE_VERSION}|g" wc-combined-shipping.php
 
 # Remove any existing zip file
-rm -f plugin*.zip
+rm -f wc-combined-shipping*.zip
 
 # Generate the theme zip file
 status "Creating archive..."
-zip -r plugin.zip \
+zip -r wc-combined-shipping.zip \
 	wc-combined-shipping.php \
 	app \
 	bootstrap \
@@ -89,8 +85,8 @@ zip -r plugin.zip \
 	-x *.git*
 
 # Rename and cleanup.
-unzip plugin.zip -d plugin && zip -r "plugin-$PACKAGE_VERSION.zip" plugin
-rm -rf plugin && rm -f plugin.zip
+unzip wc-combined-shipping.zip -d wc-combined-shipping && zip -r "wc-combined-shipping-$PACKAGE_VERSION.zip" wc-combined-shipping
+rm -rf wc-combined-shipping && rm -f wc-combined-shipping.zip
 
 # Reset generated files.
 git reset head --hard
