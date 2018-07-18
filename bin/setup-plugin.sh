@@ -31,7 +31,10 @@ status "Installing Node modules..."
 npm install
 
 status "Installing PHP dependencies..."
-composer install 
+composer install
+
+status "Generating .pot file..."
+wp i18n make-pot . resources/languages/wc-combined-shipping.pot --domain=wc-combined-shipping
 
 status "Building and watching assets..."
 npm run dev

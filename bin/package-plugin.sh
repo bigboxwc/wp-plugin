@@ -63,6 +63,9 @@ status "Installing dependencies..."
 npm install
 composer install
 
+status "Generating .pot file..."
+wp i18n make-pot . resources/languages/wc-combined-shipping.pot --domain=wc-combined-shipping
+
 status "Generating build..."
 npm run build
 
@@ -76,10 +79,10 @@ rm -f plugin*.zip
 # Generate the theme zip file
 status "Creating archive..."
 zip -r plugin.zip \
-	plugin.php \
+	wc-combined-shipping.php \
 	app \
 	bootstrap \
-	public \
+	resources/languages/*.{po,mo,pot} \
 	vendor/ \
 	LICENSE \
 	CHANGELOG.md \
