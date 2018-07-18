@@ -53,9 +53,8 @@
 		]
 	},
 	"scripts": {
-		"check-licenses": "./bin/check-npm-licenses.sh; exit 0",
-		"package-pluging": "./bin/package-theme.sh",
-		"setup-plugin": "./bin/setup-theme.sh"
+		"package-pluging": "./bin/package-plugin.sh",
+		"setup-plugin": "./bin/setup-plugin.sh"
 	},
 	"repository": {
 		"type": "git",
