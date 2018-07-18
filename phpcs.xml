@@ -5,9 +5,8 @@
 
 	<description>PHP_CodeSniffer ruleset.</description>
 
-	<file>functions.php</file>
+	<file>wc-combined-shipping.php</file>
 	<file>./app</file>
-	<file>./resources/views/</file>
 
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
@@ -16,7 +15,7 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="plugin" />
+			<property name="text_domain" type="array" value="wc-combined-shipping" />
 		</properties>
 	</rule>
 
