@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Combined Shipping for WooCommerce
  * Plugin URI: https://bigboxwc.com/
- * Description: Allow customers to combine shipping with currently open orders.
+ * Description: Allow customers to combine shipping for a new order with an existing unshipped order.
  * Version: 1.0.0
  * Author: Spencer Finnell
  *

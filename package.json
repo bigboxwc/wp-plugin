@@ -1,67 +1,20 @@
 {
-	"name": "plugin",
-	"title": "Plugin",
+	"name": "wc-combined-shipping",
+	"title": "Combined Shipping for WooCommerce",
 	"author": "Spencer Finnell",
-	"description": "WooCommerce plugin",
+	"description": "Allow customers to combine shipping for a new order with an existing unshipped order.",
 	"version": "1.0.0",
 	"license": "GPL-2.0-or-later",
-	"main": "webpack.config.js",
-	"engines": {
-		"node": ">=8.0.0",
-		"npm": ">=6.0.0"
-	},
-	"devDependencies": {
-		"@wordpress/babel-preset-default": "1.3.0",
-		"autoprefixer": "8.6.3",
-		"babel-core": "6.26.3",
-		"babel-eslint": "8.2.5",
-		"babel-loader": "7.1.4",
-		"babel-plugin-import-glob": "^2.0.0",
-		"babel-plugin-transform-react-jsx": "^6.24.1",
-		"classnames": "^2.2.5",
-		"cross-env": "^5.1.4",
-		"eslint": "5.0.0",
-		"eslint-config-wordpress": "2.0.0",
-		"eslint-plugin-jsx-a11y": "6.0.3",
-		"eslint-plugin-react": "7.10.0",
-		"eslint-plugin-wordpress": "git://github.com/WordPress-Coding-Standards/eslint-plugin-wordpress.git#1774343f6226052a46b081e01db3fca8793cc9f1",
-		"exports-loader": "^0.7.0",
-		"extract-text-webpack-plugin": "4.0.0-beta.0",
-		"file-loader": "^1.1.11",
-		"node-sass": "^4.9.0",
-		"postcss-loader": "^2.1.5",
-		"raw-loader": "^0.5.1",
-		"sass-loader": "^7.0.1",
-		"stylelint": "^9.2.0",
-		"stylelint-config-wordpress": "^13.0.0",
-		"svg-sprite-loader": "^3.7.3",
-		"svgo": "^1.0.5",
-		"svgo-loader": "^2.1.0",
-		"webpack": "^4.8.1",
-		"webpack-cli": "^3.0.3",
-		"webpack-rtl-plugin": "github:yoavf/webpack-rtl-plugin#develop"
-	},
-	"babel": {
-		"presets": [
-			"@wordpress/default",
-			{
-				"plugins": [
-					"import-glob",
-					"transform-react-jsx"
-				]
-			}
-		]
-	},
 	"scripts": {
-		"package-pluging": "./bin/package-plugin.sh",
+		"package-plugin": "./bin/package-plugin.sh",
 		"setup-plugin": "./bin/setup-plugin.sh"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bigboxwc/wp-plugin/"
+		"url": "https://github.com/bigboxwc/wc-combined-shipping/"
 	},
 	"bugs": {
-		"url": "https://github.com/bigboxwc/wp-plugin/issues"
+		"url": "https://github.com/bigboxwc/wc-combined-shipping/issues"
 	},
 	"homepage": "https://bigboxwc.com"
 }
