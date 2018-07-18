@@ -1,10 +1,12 @@
 <?php
 /**
- * Do not modify this file.
+ * Plugin Name: Plugin
+ * Plugin URI: https://bigboxwc.com/
+ * Description: WordPress plugin.
+ * Version: 1.0.0
+ * Author: Spencer Finnell
  *
- * @since 1.0.0
- *
- * @package Plugin
+ * @package BigBox\Plugin
  * @category Bootstrap
  * @author Spencer Finnell
  */
