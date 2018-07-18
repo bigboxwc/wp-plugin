@@ -6,7 +6,7 @@ const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const WebpackRTLPlugin = require( 'webpack-rtl-plugin' );
 const SpritePlugin = require( 'svg-sprite-loader/plugin' );
 
-const themeCSS = new ExtractTextPlugin( {
+const pluginCSS = new ExtractTextPlugin( {
 	filename: './public/css/app.min.css',
 } );
 
@@ -81,7 +81,7 @@ const config = {
 			},
 			{
 				test: /style\.scss$/,
-				use: themeCSS.extract( extractConfig ),
+				use: pluginCSS.extract( extractConfig ),
 				include: /scss/,
 			},
 		],
@@ -91,7 +91,7 @@ const config = {
 		$: 'jQuery',
 	},
 	plugins: [
-		themeCSS,
+		pluginCSS,
 		new SpritePlugin(),
 		new webpack.ProvidePlugin( {
 			$: 'jquery',
