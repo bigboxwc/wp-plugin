@@ -4,12 +4,12 @@
  *
  * @since 1.0.0
  *
- * @package BigBox\Plugin
+ * @package BigBox\WC_Combined_Shipping
  * @category Bootstrap
  * @author Spencer Finnell
  */
 
-namespace BigBox\Plugin;
+namespace BigBox\WC_Combined_Shipping;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -45,7 +45,7 @@ final class Plugin implements Registerable {
 		];
 
 		foreach ( $helpers as $file ) {
-			require_once trailingslashit( PLUGIN_PATH ) . trailingslashit( 'app' ) . $file . '.php';
+			require_once trailingslashit( WC_COMBINED_SHIPPING_PATH ) . trailingslashit( 'app' ) . $file . '.php';
 		}
 	}
 
@@ -106,7 +106,7 @@ final class Plugin implements Registerable {
 		 *
 		 * @param array $services Fully qualified class names of services.
 		 */
-		return apply_filters( 'plugin_get_services', [] );
+		return apply_filters( 'wc_combined_shipping_get_services', [] );
 	}
 
 }

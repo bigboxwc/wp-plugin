@@ -9,7 +9,7 @@
  * @author Spencer Finnell
  */
 
-namespace BigBox\Plugin\Exception;
+namespace BigBox\WC_Combined_Shipping\Exception;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.

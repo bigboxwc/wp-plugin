@@ -4,7 +4,7 @@
  *
  * @since 1.0.0
  *
- * @package BigBox\Child
+ * @package BigBox\WC_Combined_Shipping
  * @category Bootstrap
  * @author Spencer Finnell
  */

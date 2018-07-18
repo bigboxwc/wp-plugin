@@ -4,7 +4,7 @@
  *
  * @since 1.0.0
  *
- * @package BigBox\Plugin
+ * @package BigBox\WC_Combined_Shipping
  * @category Bootstrap
  * @author Spencer Finnell
  */
@@ -13,6 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-function plugin() {
-  return PluginFactory::create();
+function wc_combined_shipping() {
+  return BigBox\WC_Combined_Shipping\PluginFactory::create();
 }

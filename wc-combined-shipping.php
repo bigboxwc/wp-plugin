@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Plugin
+ * Plugin Name: Combined Shipping for WooCommerce
  * Plugin URI: https://bigboxwc.com/
- * Description: WordPress plugin.
+ * Description: Allow customers to combine shipping with currently open orders.
  * Version: 1.0.0
  * Author: Spencer Finnell
  *
@@ -16,11 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Current version -- automatically updated on release.
-define( 'PLUGIN_VERSION', '%PLUGIN_VERSION%' );
+define( 'WC_COMBINED_SHIPPING_VERSION', '%PLUGIN_VERSION%' );
 
 // Plugin path and URL.
-define( 'PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'WC_COMBINED_SHIPPING_PATH', plugin_dir_path( __FILE__ ) );
+define( 'WC_COMBINED_SHIPPING_URL', plugin_dir_url( __FILE__ ) );
 
 // Composer autoloader.
 require_once __DIR__ . '/bootstrap/version-check.php';

@@ -4,12 +4,12 @@
  *
  * @since 1.0.0
  *
- * @package BigBox\Plugin
+ * @package BigBox\WC_Combined_Shipping
  * @category Exception
  * @author Spencer Finnell
  */
 
-namespace BigBox\Plugin\Exception;
+namespace BigBox\WC_Combined_Shipping\Exception;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
