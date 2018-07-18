@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Minimum PHP version.
-define( 'WC_COMBINED_SHIPPING_PHP_VERSION', '7.0.0' );
+define( 'WC_COMBINED_SHIPPING_PHP_VERSION', '5.4.0' );
 
 // Do not allow the theme to be active if the PHP version is not met.
 if ( version_compare( PHP_VERSION, WC_COMBINED_SHIPPING_PHP_VERSION, '<' ) ) {
@@ -54,6 +54,6 @@ function wc_combined_shipping_get_php_notice_text() {
 	return apply_filters(
 		'wc_combined_shipping_php_notice_text',
 		/* translators: %s Minimum PHP version required for theme to run. */
-		wp_kses_post( sprintf( __( 'Plugin requires PHP version <code>%s</code> or above to be active. Please contact your web host to upgrade.', 'wc-combined-shipping' ), esc_attr( WC_COMBINED_SHIPPING_PHP_VERSION ) ) )
+		wp_kses_post( sprintf( __( 'Combined Shipping for WooCommerce requires PHP version <code>%s</code> or above to be active. Please contact your web host to upgrade.', 'wc-combined-shipping' ), esc_attr( WC_COMBINED_SHIPPING_PHP_VERSION ) ) )
 	);
 }
