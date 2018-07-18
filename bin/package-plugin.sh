@@ -66,7 +66,6 @@ status "Generating .pot file..."
 wp i18n make-pot . resources/languages/wc-combined-shipping.pot --domain=wc-combined-shipping
 
 # Update version in files.
-sed -i "" "s|%WC_COMBINED_SHIPPING_VERSION%|${PACKAGE_VERSION}|g" style.css
 sed -i "" "s|%WC_COMBINED_SHIPPING_VERSION%|${PACKAGE_VERSION}|g" wc-combined-shipping.php
 
 # Remove any existing zip file
