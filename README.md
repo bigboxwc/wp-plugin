@@ -9,9 +9,15 @@ WordPress plugin base.
 
 ## Install
 
+#### Clone Repository
+
 ```
 $ git clone git@github.com:bigboxwc/wp-plugin wp-plugin && cd wp-plugin
-$ npm run setup-theme
+```
+
+#### Setup Plugin
+```
+$ npm run setup-plugin
 ```
 
 ## Develop
@@ -22,10 +28,20 @@ $ npm run dev
 
 ## Lint
 
+#### Javascript
+
 ```
-$ npm run lint # Lint Javascript
-$ npm run css-lint # Lint CSS
-$ composer run lint # Lint PHP
+$ npm run lint
+```
+
+#### CSS
+```
+$ npm run css-lint
+```
+
+#### PHP
+```
+$ composer run lint
 ```
 
 ## Release
