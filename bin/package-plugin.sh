@@ -13,13 +13,13 @@ PACKAGE_NAME="wp-plugin"
 PACKAGE_VERSION=$(get_package_version_number)
 PACKAGE_VERSION_PLACEHOLDER="PLUGIN_VERSION"
 
-# Setup theme
-source "$(dirname "$0")/setup-theme.sh"
+# Setup plugin
+source "$(dirname "$0")/setup-plugin.sh"
 
 # Update version in files.
 sed -i "" "s|%${PACKAGE_VERSION_PLACEHOLDER}%|${PACKAGE_VERSION}|g" plugin.php
 
-# Generate the theme zip file
+# Generate the plugin zip file
 status_message "Creating archive..."
 zip -r $PACKAGE_NAME.zip \
 	plugin.php \
