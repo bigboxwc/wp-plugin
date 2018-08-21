@@ -1,8 +1,8 @@
 {
-	"name": "plugin",
+	"name": "wp-plugin",
 	"title": "Plugin",
 	"author": "Spencer Finnell",
-	"description": "WooCommerce plugin",
+	"description": "WordPress plugin",
 	"version": "1.0.0",
 	"license": "GPL-2.0-or-later",
 	"main": "webpack.config.js",
