@@ -11,6 +11,8 @@
 
 namespace BigBox\Plugin;
 
+use const BigBox\Plugin\PATH;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -26,12 +28,10 @@ final class Plugin implements Registerable {
 	 * Register the theme with the WordPress system.
 	 *
 	 * @since 1.0.0
-	 *
-	 * @throws Exception\InvalidService If a service is not valid.
 	 */
 	public function register() {
-		$this->load_helpers();
-		$this->register_services();
+		add_action( 'plugins_loaded', [ $this, 'load_helpers' ] );
+		add_action( 'plugins_loaded', [ $this, 'register_services' ] );
 	}
 
 	/**
@@ -42,10 +42,11 @@ final class Plugin implements Registerable {
 	public function load_helpers() {
 		$helpers = [
 			'template-tags',
+			'assets',
 		];
 
 		foreach ( $helpers as $file ) {
-			require_once trailingslashit( PLUGIN_PATH ) . trailingslashit( 'app' ) . $file . '.php';
+			require_once trailingslashit( PATH ) . trailingslashit( 'app' ) . $file . '.php';
 		}
 	}
 
@@ -60,11 +61,8 @@ final class Plugin implements Registerable {
 		$services = $this->get_services();
 		$services = array_map( [ $this, 'instantiate_service' ], $services );
 
-		array_walk(
-			$services, function( Service $service ) {
-				$service->register();
-			}
-		);
+		// Register.
+		array_walk( $services, [ $this, 'register_service' ] );
 	}
 
 	/**
@@ -92,6 +90,17 @@ final class Plugin implements Registerable {
 	}
 
 	/**
+	 * Register a single service.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param Service $service service information.
+	 */
+	public function register_service( Service $service ) {
+		return $service->register();
+	}
+
+	/**
 	 * Get the list of services to register.
 	 *
 	 * @since 1.0.0
@@ -99,6 +108,8 @@ final class Plugin implements Registerable {
 	 * @return array Array of fully qualified class names.
 	 */
 	private function get_services() {
+		$services = [];
+
 		/**
 		 * Filters the registered services.
 		 *
@@ -106,7 +117,7 @@ final class Plugin implements Registerable {
 		 *
 		 * @param array $services Fully qualified class names of services.
 		 */
-		return apply_filters( 'plugin_get_services', [] );
+		return apply_filters( 'plugin_get_services', $services );
 	}
 
 }

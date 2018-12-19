@@ -15,8 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$plugin = new Plugin();
+
 add_action(
-	'plugins_loaded', function() {
-		return PluginFactory::create()->register();
-	}
+	'plugins_loaded',
+	[ $plugin, 'register' ],
+	9
 );

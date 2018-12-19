@@ -5,14 +5,10 @@
  * @since 1.0.0
  *
  * @package BigBox\Plugin
- * @category Bootstrap
+ * @category Functions
  * @author Spencer Finnell
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
-}
-
-function plugin() {
-  return PluginFactory::create();
 }

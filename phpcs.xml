@@ -5,9 +5,8 @@
 
 	<description>PHP_CodeSniffer ruleset.</description>
 
-	<file>functions.php</file>
+	<file>plugin.php</file>
 	<file>./app</file>
-	<file>./resources/views/</file>
 
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
