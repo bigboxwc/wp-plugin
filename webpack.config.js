@@ -3,7 +3,6 @@
  */
 const webpack = require( 'webpack' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-const WebpackRTLPlugin = require( 'webpack-rtl-plugin' );
 const SpritePlugin = require( 'svg-sprite-loader/plugin' );
 
 const pluginCSS = new ExtractTextPlugin( {
@@ -87,8 +86,7 @@ const config = {
 		],
 	},
 	externals: {
-		jquery: 'jQuery',
-		$: 'jQuery',
+		'@wordpress/element': 'wp.element',
 	},
 	plugins: [
 		pluginCSS,
