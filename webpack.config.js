@@ -65,8 +65,9 @@ const config = {
 						options: {
 							limit: 8000, // Convert images < 8kb to base64 strings
 							name: '[name].[ext]',
-							useRelativePath: true,
-							outputPath: './public/',
+							outputPath: ( url, resourcePath, context ) => {
+								return `./public/${ path.relative( context, resourcePath ).replace( 'resources/assets', '' ) }`
+							}
 						},
 					},
 				],
