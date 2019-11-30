@@ -17,7 +17,7 @@
 		"@wordpress/browserslist-config": "2.6.0",
 		"@wordpress/element": "2.9.0",
 		"@wordpress/eslint-plugin": "3.2.0",
-		"autoprefixer": "9.7.2",
+		"autoprefixer": "9.7.3",
 		"babel-loader": "8.0.6",
 		"babel-plugin-import-glob": "2.0.0",
 		"classnames": "2.2.6",
