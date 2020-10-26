@@ -23,7 +23,7 @@
 		"classnames": "2.2.6",
 		"cross-env": "7.0.0",
 		"eslint": "6.8.0",
-		"exports-loader": "0.7.0",
+		"exports-loader": "1.1.1",
 		"extract-text-webpack-plugin": "4.0.0-beta.0",
 		"file-loader": "5.0.2",
 		"node-sass": "4.13.0",
